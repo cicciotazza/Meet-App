@@ -22,4 +22,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/node_modules
+#package directories
+node_modules
+jspm_packages
+
+#serveless directories
+.serveless
+
+#environmental variables
+config.json
