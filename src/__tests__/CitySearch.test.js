@@ -9,7 +9,7 @@ describe('<CitySearch /> component', () => {
     beforeAll(() => {
         locations = extractLocations(mockData);
         CitySearchWrapper = shallow(<CitySearch locations={locations} updateEvents={() => { }} />);
-    
+
     });
 
     test('render text input', () => {
@@ -69,16 +69,16 @@ describe('<CitySearch /> component', () => {
         CitySearchWrapper.find('.city').simulate('focus');
         expect(CitySearchWrapper.state('showSuggestions')).toBe(true);
         expect(CitySearchWrapper.find('.suggestions').prop('style')).not.toEqual({ display: 'none' });
-      });
+    });
 
-      test("selecting a suggestion should hide the suggestions list", () => {
+    test("selecting a suggestion should hide the suggestions list", () => {
         CitySearchWrapper.setState({
-          query: 'Berlin',
-          showSuggestions: undefined
+            query: 'Berlin',
+            showSuggestions: undefined
         });
         CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
         expect(CitySearchWrapper.state('showSuggestions')).toBe(false);
         expect(CitySearchWrapper.find('.suggestions').prop('style')).toEqual({ display: 'none' });
-      });
-        
+    });
+
 });

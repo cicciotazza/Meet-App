@@ -21,17 +21,17 @@ const checkToken = async (accessToken) => {
 const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const { access_token } = await fetch(
-      'https://elgx1uk8ra.execute-api.us-east-2.amazonaws.com/dev/api/token' + '/' + encodeCode
+        'https://elgx1uk8ra.execute-api.us-east-2.amazonaws.com/dev/api/token' + '/' + encodeCode
     )
-      .then((res) => {
-        return res.json();
-      })
-      .catch((error) => error);
-  
+        .then((res) => {
+            return res.json();
+        })
+        .catch((error) => error);
+
     access_token && localStorage.setItem("access_token", access_token);
-  
+
     return access_token;
-  };
+};
 
 const removeQuery = () => {
     if (window.history.pushState && window.location.pathname) {
