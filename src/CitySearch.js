@@ -17,6 +17,14 @@ class CitySearch extends Component {
         });
     };
 
+    handleItemClicked = (suggestion) => {
+        this.setState({
+          query: suggestion
+        });
+      
+        this.props.updateEvents(suggestion);
+      }
+
     render() {
         return (
             <div className="CitySearch">
@@ -39,12 +47,6 @@ class CitySearch extends Component {
                 </ul>
             </div>
         );
-    }
-
-    handleItemClicked = (suggestion) => {
-        this.setState({
-            query: suggestion
-        });
     }
 }
 
