@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Event from './Event';
 
 export function EventList(props) {
