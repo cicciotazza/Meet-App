@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { shallow } from 'enzyme';
 import { NumberOfEvents } from '../NumberOfEvents';
@@ -25,5 +24,6 @@ describe('<NumberOfEvents /> component', () => {
         NumberOfEventsWrapper.find('.number').simulate('change', numberOfEventObject);
         expect(spy).toHaveBeenCalled();
     });
+
 
 });

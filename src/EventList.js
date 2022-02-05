@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Event from './Event';
+import React from 'react';
+import { Event } from './Event';
 
 export function EventList(props) {
   const { events } = props;
