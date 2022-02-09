@@ -4,6 +4,8 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
+import { ErrorAlert, WarningAlert } from './Alert';
+
 import './nprogress.css';
 
 export class App extends Component {
@@ -66,9 +68,18 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Meet-App</h1>
+        <h4>Select one city</h4>
+        
+        {!navigator.onLine ? (<WarningAlert text='Offline mode! List not upddated' />) : (<WarningAlert text=' ' />)}
+        
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+
         <EventList events={this.state.events} />
+
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} errorText={this.state.errorText} />
+        <h4>Events in each city</h4>
+
       </div>
     );
   }
