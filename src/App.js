@@ -70,9 +70,9 @@ export class App extends Component {
       <div className="App">
         <h1>Meet-App</h1>
         <h4>Select one city</h4>
-        
-        {!navigator.onLine ? (<WarningAlert text='Offline mode! List not upddated' />) : (<WarningAlert text=' ' />)}
-        
+
+        {!navigator.onLine ? (<WarningAlert text='Offline mode! List not updated' />) : (<WarningAlert text=' ' />)}
+
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
 
         <EventList events={this.state.events} />
