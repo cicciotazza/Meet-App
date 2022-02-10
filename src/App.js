@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
@@ -8,6 +7,7 @@ import { WarningAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
 
 import './nprogress.css';
+import './App.css';
 
 export class App extends Component {
 
@@ -85,8 +85,7 @@ export class App extends Component {
       return (
         <div className="App">
           <h1 className="page-title">Meet-App</h1>
-          <h3 className="page-subtitle">Share your passion by selecting one city</h3>
-          <h3 className="chart-header">coming soon</h3>
+          <h3 className="page-subtitle">Coding is passion, join one event!</h3>
 
           {!navigator.onLine ? (<WarningAlert text='Offline mode! List not updated' />) : (<WarningAlert text=' ' />)}
 
@@ -102,9 +101,10 @@ export class App extends Component {
             updateNumberOfEvents={this.updateNumberOfEvents}
             errorText={this.state.errorText} />
 
-          <h4>Events in each city</h4>
+          <h4 className='textNumberOfEvents'>Events in each city</h4>
         </div>
-      )}
+      )
+    }
 
     if (this.state.showWelcomeScreen === true) {
       return (
