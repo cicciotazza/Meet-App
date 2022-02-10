@@ -47,6 +47,7 @@ input[type="number"] {
   line-height: 20px;
   align-self: center;
   height: 38px;
+  margin-top: 1%;
 }
 
 .city {
@@ -144,7 +145,7 @@ button.hide-details-btn:hover {
   }
 }
 .textNumberOfEvents{
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   }
 
   .page-subtitle{
@@ -155,7 +156,6 @@ button.hide-details-btn:hover {
     color: #13334c;
   }
 
-
   .suggestions {
     color: #fd5f00 ;
   }
@@ -163,7 +163,7 @@ button.hide-details-btn:hover {
   .suggestions > li {
     background-color: #eec60a;
     cursor: default;
-    padding: 8px 6px 8px 10px;
+    padding: 8px 10px 8px 10px;
     margin-left: 5%;
     margin-right: 5%;
   }
